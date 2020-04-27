@@ -47,6 +47,3 @@ TagManager:
   - name: intaraction
     uniqueID: 2790578545
     locked: 0
-  - name: counter
-    uniqueID: 3504374343
-    locked: 0
