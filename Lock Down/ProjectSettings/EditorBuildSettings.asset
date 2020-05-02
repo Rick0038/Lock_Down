@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/first_floor_room.unity
+    guid: d5a93420969e2d447a49b16a8e579011
+  - enabled: 1
+    path: Assets/Scenes/kitchen.unity
+    guid: f09debaa897b0ce4193ab519c16d0fe2
+  - enabled: 1
+    path: Assets/Scenes/Hall_Room.unity
+    guid: a249b78f194daf642b49b53084acb987
+  - enabled: 1
+    path: Assets/Scenes/Food Shop.unity
+    guid: 6b34264e750d36a4e802917c96a7e38f
   m_configObjects: {}
