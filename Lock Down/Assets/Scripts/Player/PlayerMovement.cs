@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     Vector3 startPos;													// to mark the start position
     Vector3 endPos;														// to mark the end position
     float t;															// to mark the time
+    public Rigidbody2D rigidbody;    
 
     public Sprite northSprite;											// to set the facing to north sprite
     public Sprite southSprite;											// to set the facing to south sprite
@@ -22,21 +23,22 @@ public class PlayerMovement : MonoBehaviour {
     void Start()														// starting the movement via start function
     {
         isAllowedToMove = true;
+        rigidbody = this.GetComponent<Rigidbody2D>();
     }
 
 	void Update () { 
 
         if(!isMoving && isAllowedToMove)								// to cheak if input is prerssd and if we are allowed to move
         {
-            input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-																		// making a vector2 object to store the virtical and horizontal input 
-            
-            if (Mathf.Abs(input.x) > Mathf.Abs(input.y))				// this if statement is to stop from making digonal movement 
+             input.x = Input.GetAxisRaw("Horizontal");
+			 input.y = Input.GetAxisRaw("Vertical");
+
+			if (Mathf.Abs(input.x) > Mathf.Abs(input.y))				// this if statement is to stop from making digonal movement 
 																		// if the x cord move is greater than y we take y cor movement=0
                 input.y = 0;
             else
-                input.x = 0;											// if the y cord move is greater than y we take x cor movement=0
-
+                input.x = 0;
+			
             if(input != Vector2.zero)									// to see if the input is zero or not we only move if the input is not 0
             {
 
@@ -74,33 +76,19 @@ public class PlayerMovement : MonoBehaviour {
                         break;											// to render the north sprite when west (x-) 
                 }
 
-                StartCoroutine(Move(transform));
+               
             }
 
         }
 
 	}
 
-    public IEnumerator Move(Transform entity)							// function to move the player object  
-    {
-        isMoving = true;												// movement started ,so bool is true
-        startPos = entity.position;										// to set the start position in current entity position
-        t = 0;															// time is zero ,we are resetting the time for movement everytime we take input
-
-        endPos = new Vector3(startPos.x + System.Math.Sign(input.x), startPos.y + System.Math.Sign(input.y), startPos.z);
-																		// to set the end position after processing the input
-
-        while (t < 1f)													//
-        {
-            t += Time.deltaTime * walkSpeed;							// time fo forward when movement is processed with the multiplier of movement speed
-            entity.position = Vector3.Lerp(startPos, endPos, t);		// set entity position from start to end position in "t" amount of time 
-            yield return null;											// end the loop
-        }
-
-        isMoving = false;												// movement stopped,so bool is false 
-																		// between the ismoving ture & false key presses will not be processed
-        yield return 0;													// no return from function
-    }
+    private void FixedUpdate()
+{
+	isMoving = true;
+    rigidbody.MovePosition(rigidbody.position + input * walkSpeed * Time.fixedDeltaTime);
+    isMoving = false;
+}
 }
 
 enum Direction															// to set direction for the player 

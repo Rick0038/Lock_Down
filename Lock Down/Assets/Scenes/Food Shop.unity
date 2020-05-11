@@ -3745,13 +3745,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f87aa4e2fb8914bb4c269756e30930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  northSprite: {fileID: -4312959346109786154, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
+  rigidbody: {fileID: 0}
+  northSprite: {fileID: -2847823790183061483, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
     type: 3}
-  southSprite: {fileID: -5515383189529662604, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
+  southSprite: {fileID: 5382512944479897801, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
     type: 3}
-  eastSprite: {fileID: 5288689158075730194, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
+  eastSprite: {fileID: -779157609879621035, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
     type: 3}
-  westSprite: {fileID: -4424780041397978121, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
+  westSprite: {fileID: -3926759211464601419, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
     type: 3}
   walkSpeed: 3
   isAllowedToMove: 1
@@ -3840,7 +3841,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2060514755
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: 3191122964850554743, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
