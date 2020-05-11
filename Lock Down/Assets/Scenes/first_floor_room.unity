@@ -1361,6 +1361,7 @@ GameObject:
   - component: {fileID: 205661048}
   - component: {fileID: 205661047}
   - component: {fileID: 205661046}
+  - component: {fileID: 205661051}
   m_Layer: 0
   m_Name: character
   m_TagString: Player
@@ -1427,6 +1428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f87aa4e2fb8914bb4c269756e30930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
   northSprite: {fileID: -4312959346109786154, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
     type: 3}
   southSprite: {fileID: -5515383189529662604, guid: 12a4e7d3a7e3d0444a01bc215b48c767,
@@ -1502,6 +1504,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &205661051
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205661045}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.78125, y: 1.40625}
+    newSize: {x: 0.65625, y: 1.40625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.78125, y: 1.40625}
+  m_EdgeRadius: 0
 --- !u!1 &228876816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,7 +1583,7 @@ Transform:
   - {fileID: 1120059710}
   - {fileID: 58415950}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &372297724
 GameObject:
@@ -1740,7 +1768,7 @@ Transform:
   m_Children:
   - {fileID: 1005216881}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657594422
 GameObject:
@@ -1925,6 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f87aa4e2fb8914bb4c269756e30930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
   northSprite: {fileID: -4703073973657460086, guid: 4534f9f5b7ae803408c464425fd7ed63,
     type: 3}
   southSprite: {fileID: -549789443665989942, guid: 4534f9f5b7ae803408c464425fd7ed63,
@@ -1998,7 +2027,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &945155460
 Rigidbody2D:
