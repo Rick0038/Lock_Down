@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Study_Room.unity
     guid: aa2f939f40158ad4abda78b4eddec880
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/Bathroom.unity
     guid: 6a70080e203ebc0429e0254e70526c69
+=======
+>>>>>>> 0fd219834ff45bb26d18a7edfdf0bcc9de6a2df3
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
