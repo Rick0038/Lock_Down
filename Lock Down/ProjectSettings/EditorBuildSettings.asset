@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Study_Room.unity
     guid: aa2f939f40158ad4abda78b4eddec880
-  - enabled: 1
-    path: Assets/Scenes/Hall_Room_v2.unity
-    guid: 4232fc881609c0044b1aec3f8101872b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
